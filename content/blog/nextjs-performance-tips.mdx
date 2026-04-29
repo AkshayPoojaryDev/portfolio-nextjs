@@ -1,0 +1,144 @@
+---
+title: "10 Performance Tips for Next.js"
+description: "Essential performance optimization techniques for building fast Next.js applications."
+date: "2024-01-15"
+author: "Your Name"
+---
+
+# 10 Performance Tips for Next.js
+
+Building fast web applications is crucial for user experience and SEO. Here are 10 essential performance tips for Next.js.
+
+## 1. Image Optimization
+
+Always use the Next.js Image component:
+
+```tsx
+import Image from 'next/image'
+
+export default function Hero() {
+  return (
+    <Image
+      src="/hero.jpg"
+      alt="Hero image"
+      width={1200}
+      height={630}
+      priority // LCP image
+    />
+  )
+}
+```
+
+The Image component automatically:
+- Optimizes format (WebP, AVIF)
+- Lazy loads by default
+- Responsive images
+- Prevents layout shift
+
+## 2. Font Optimization
+
+Use `next/font` for self-hosted fonts:
+
+```tsx
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export default function RootLayout({ children }) {
+  return (
+    <html className={inter.className}>
+      <body>{children}</body>
+    </html>
+  )
+}
+```
+
+## 3. Code Splitting
+
+Dynamic imports for large components:
+
+```tsx
+import dynamic from 'next/dynamic'
+
+const HeavyComponent = dynamic(
+  () => import('@/components/Heavy'),
+  { loading: () => <p>Loading...</p> }
+)
+```
+
+## 4. Route Prefetching
+
+Next.js prefetches links automatically when in viewport. You can also prefetch manually:
+
+```tsx
+import { useRouter } from 'next/navigation'
+
+const router = useRouter()
+router.prefetch('/about')
+```
+
+## 5. Static Generation
+
+Use static generation when possible:
+
+```tsx
+// Generated at build time
+export default function Page() {
+  return <div>Static page</div>
+}
+
+// Revalidate every hour
+export const revalidate = 3600
+```
+
+## 6. Bundle Analysis
+
+Install `@next/bundle-analyzer`:
+
+```bash
+npm install @next/bundle-analyzer
+```
+
+Identify large dependencies and optimize.
+
+## 7. API Routes Caching
+
+Cache API responses:
+
+```tsx
+export default function handler(req, res) {
+  res.setHeader('Cache-Control', 'max-age=60')
+  res.json({ data: 'cached' })
+}
+```
+
+## 8. Compression
+
+Next.js compression is enabled by default. Ensure your server supports gzip/brotli.
+
+## 9. Web Vitals Monitoring
+
+Monitor Core Web Vitals:
+
+```tsx
+import { useReportWebVitals } from 'next/web-vitals'
+
+export function reportWebVitals(metric) {
+  console.log(metric)
+}
+```
+
+## 10. Remove Unused CSS
+
+Tailwind CSS automatically purges unused styles in production.
+
+---
+
+## Lighthouse Targets
+
+- Performance: 90+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 100
+
+Implement these tips to achieve excellent Lighthouse scores and provide fast, responsive user experiences.

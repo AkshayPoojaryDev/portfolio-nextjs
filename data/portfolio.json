@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "logo": "<Akshay/>"
+  },
+  "hero": {
+    "label": "Full-Stack Developer · 2024",
+    "name": "Akshay",
+    "tagline": "Builds things.",
+    "subtitle": "Front to back.",
+    "bio": "I craft pixel-perfect UIs and architect scalable backends — turning ideas into fast, functional, beautiful products. 1 year in, infinitely curious.",
+    "bioHighlight1": "pixel-perfect UIs",
+    "bioHighlight2": "scalable backends",
+    "terminalCmd": "node server.js --env=production",
+    "ctaPrimary": "View my work →",
+    "ctaSecondary": "Let's talk"
+  },
+  "stats": [
+    {
+      "display": "12+",
+      "label": "Projects shipped",
+      "animate": true,
+      "target": 12,
+      "suffix": "+"
+    },
+    {
+      "display": "1yr",
+      "label": "Professional experience",
+      "animate": true,
+      "target": 1,
+      "suffix": "yr"
+    },
+    {
+      "display": "∞",
+      "label": "Lines of coffee consumed",
+      "animate": false
+    },
+    {
+      "display": "08",
+      "label": "Technologies mastered",
+      "animate": false
+    }
+  ],
+  "marquee": [
+    "React",
+    "Node.js",
+    "TypeScript",
+    "REST APIs",
+    "Tailwind CSS",
+    "Docker",
+    "Git",
+    "Express.js",
+    "Python",
+    "JavaScript"
+  ],
+  "about": {
+    "para1": "I'm a full-stack developer with 1 year of experience building web applications that live at the intersection of great design and solid engineering. I care deeply about both how things look and how they work under the hood.",
+    "para2": "On the frontend, I obsess over performance, accessibility, and motion. On the backend, I build RESTful APIs, design schemas, and make sure the data flows clean. I believe good software is both an engineering challenge and a creative act.",
+    "para3": "Currently open to new opportunities — remote or onsite.",
+    "code": {
+      "name": "Akshay",
+      "role": "Full-Stack Developer",
+      "experience": "1 year",
+      "location": "Mangalore, Karnataka",
+      "frontend": [
+        "React",
+        "TypeScript"
+      ],
+      "backend": [
+        "Node",
+        "Express"
+      ],
+      "db": [
+        "Firebase",
+        "SQL"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "title": "Frontend",
+      "items": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Redux",
+        "Zustand"
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "JWT Auth",
+        "WebSockets"
+      ]
+    },
+    {
+      "title": "Tools & Infra",
+      "items": [
+        "Git & GitHub",
+        "Docker",
+        "Linux",
+        "Vercel",
+        "Figma",
+        "VS Code",
+        "npm / pnpm"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project One — Your Best Work",
+      "description": "A full-stack application with real-time features, JWT authentication, and a polished React frontend. Built a custom REST API with Express and PostgreSQL handling 1000+ requests per day.",
+      "tags": [
+        {
+          "label": "Full Stack",
+          "type": "full"
+        },
+        {
+          "label": "React",
+          "type": "fe"
+        },
+        {
+          "label": "Node.js",
+          "type": "be"
+        }
+      ],
+      "link": "#",
+      "featured": true,
+      "visual": "featured"
+    },
+    {
+      "id": 2,
+      "title": "Dashboard UI",
+      "description": "A data visualization dashboard with real-time charts, dark mode, and responsive design. Built with React, TypeScript, and Recharts.",
+      "tags": [
+        {
+          "label": "Frontend",
+          "type": "fe"
+        },
+        {
+          "label": "TypeScript",
+          "type": "fe"
+        }
+      ],
+      "link": "#",
+      "featured": false,
+      "visual": "dashboard"
+    },
+    {
+      "id": 3,
+      "title": "REST API Service",
+      "description": "A robust REST API with auth, rate limiting, and full CRUD operations. Documented with Swagger and deployed on Railway with 99.9% uptime.",
+      "tags": [
+        {
+          "label": "Backend",
+          "type": "be"
+        },
+        {
+          "label": "Express",
+          "type": "be"
+        }
+      ],
+      "link": "#",
+      "featured": false,
+      "visual": "terminal"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2025 – Present",
+      "role": "Software Developer",
+      "company": "Mangates · Moodbidri, Karnataka",
+      "desc": "Built and maintained React frontends and Node.js backend services. Collaborated with senior devs on database design and API architecture. Shipped 5+ features in a production environment."
+    },
+    {
+      "date": "2023 – 2024",
+      "role": "Frontend Developer Intern",
+      "company": "Nicozn technologies · Remote",
+      "desc": "Developed responsive UI components in React, worked closely with designers to implement pixel-perfect layouts and improve mobile performance scores by 40%."
+    },
+    {
+      "date": "2023 – 2024",
+      "role": "MCA ",
+      "company": "Mangalore Institute of Technology & Engineering · Karnataka",
+      "desc": "Graduated with a focus on software engineering fundamentals. Built personal projects in web development and algorithms throughout all four years."
+    }
+  ],
+  "contact": {
+    "email": "akshaycpoojary@email.com",
+    "social": [
+      {
+        "label": "GitHub",
+        "short": "GH",
+        "href": "https://github.com/AkshayPoojaryDev"
+      },
+      {
+        "label": "LinkedIn",
+        "short": "LI",
+        "href": "https://www.linkedin.com/in/akshay-c-633510207/"
+      },
+      {
+        "label": "Resume",
+        "short": "CV",
+        "href": "#"
+      }
+    ]
+  },
+  "footer": {
+    "name": "Akshay",
+    "year": "2024"
+  }
+}
