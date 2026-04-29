@@ -37,6 +37,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+# security and data
+data/portfolio.json
+admin.json
+service-account.json
+credentials.json
+**/admin/*.json
+*.secret.json
+.env*
+!.env.example
+
 # IDEs
 .vscode/
 .idea/
