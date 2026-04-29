@@ -8,8 +8,8 @@ export default function ExperienceSection() {
       <Reveal><h2 className="section-title">Where I&apos;ve<br />been.</h2></Reveal>
       <Reveal delay={100}>
         <div className="timeline">
-          {data.experience.map((item) => (
-            <div key={item.date} className="timeline-item">
+          {data.experience.map((item, i) => (
+            <div key={`${i}-${item.date}`} className="timeline-item">
               <div className="timeline-date">{item.date}</div>
               <div className="timeline-role">{item.role}</div>
               <div className="timeline-company">{item.company}</div>
