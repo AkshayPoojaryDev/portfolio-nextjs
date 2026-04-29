@@ -1,239 +1,109 @@
-# Dev Portfolio
+# 🚀 Akshay's Portfolio
 
-Bold, creative portfolio built with **Next.js 14**, **App Router**, **Framer Motion**, and **Tailwind CSS**.
-
-## Features
-
-✅ **Next.js 14** with App Router  
-✅ **TypeScript** for type safety  
-✅ **Framer Motion** animations  
-✅ **Dark Mode** toggle with localStorage  
-✅ **MDX Blog** with reading time  
-✅ **Contact Form** with email (Nodemailer)  
-✅ **Responsive Design** (mobile-first)  
-✅ **SEO Optimized** (metadata, sitemap)  
-✅ **Performance** (image optimization, lazy loading)  
-✅ **Deployed on Vercel** (one-click deploy)
+A high-performance, dynamic portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. This project features a data-driven architecture, allowing you to update your entire site content through a single JSON file or an admin dashboard.
 
 ---
 
-## Project Structure
+## ✨ Features
 
-```
-portfolio-next/
-├── app/
-│   ├── actions/              # Server actions (contact form)
-│   ├── api/                  # API routes (if needed)
-│   ├── blog/                 # Blog pages
-│   ├── components/           # React components
-│   │   ├── sections/         # Page sections
-│   │   ├── providers/        # Context providers
-│   │   └── Navigation.tsx    # Header nav
-│   ├── layout.tsx            # Root layout
-│   ├── globals.css           # Global styles
-│   └── page.tsx              # Home page
-├── content/
-│   └── blog/                 # MDX blog posts
-├── lib/                      # Utilities
-│   ├── mdx.ts               # Blog parsing
-│   └── utils.ts             # Helper functions
-├── public/                   # Static assets
-├── types/                    # TypeScript types
-├── .env.example              # Environment template
-├── next.config.ts            # Next.js config
-├── tailwind.config.ts        # Tailwind config
-├── tsconfig.json             # TypeScript config
-└── package.json              # Dependencies
+-   🌐 **Next.js 14 (App Router)**: Fast, modern React framework.
+-   🎨 **Dynamic Styling**: Beautiful UI with Tailwind CSS and Framer Motion.
+-   📊 **Data-Driven**: Content is decoupled from code, stored in `data/portfolio.json`.
+-   🛠️ **Admin Dashboard**: Secure management interface for live content updates.
+-   📧 **Contact System**: Fully functional contact form with server actions.
+-   📱 **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop).
+-   🌑 **Dark Mode**: Built-in theme switching.
+-   🚀 **SEO Optimized**: Pre-configured metadata and semantic HTML.
 
+---
+
+## 📂 Project Structure
+
+```text
+portfolio-nextjs/
+├── app/                  # Next.js App Router routes
+│   ├── admin/            # Secure admin dashboard
+│   ├── api/              # Backend API endpoints
+│   └── actions/          # Server actions (e.g., Contact Form)
+├── components/           # Reusable React components
+│   ├── providers/        # Context providers (Theme, etc.)
+│   └── sections/         # Main page sections (Hero, About, etc.)
+├── data/                 # Dynamic content source
+│   └── portfolio.json    # The "Single Source of Truth" for your content
+├── lib/                  # Utility functions and shared logic
+├── public/               # Static assets (Images, SVGs)
+└── content/              # MDX blog content (optional)
 ```
 
 ---
 
-## Quick Start
+## 🛠️ Getting Started
 
-### 1. Clone & Install
+### 1. Prerequisites
+-   Node.js (LTS version)
+-   **pnpm** (preferred) or npm/yarn
+
+### 2. Installation
 ```bash
-git clone <repo-url>
-cd portfolio-next
-npm install
+# Clone the repository
+git clone <your-repo-url>
+cd portfolio-nextjs
+
+# Install dependencies
+pnpm install
 ```
 
-### 2. Setup Environment
+### 3. Environment Setup
+Create a `.env.local` file in the root directory:
 ```bash
 cp .env.example .env.local
 ```
+Fill in your credentials (e.g., Email service settings).
 
-Update `.env.local`:
-```
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-specific-password
-CONTACT_EMAIL=your-email@gmail.com
-```
-
-**Gmail Setup:**
-- Enable 2FA on Google Account
-- Generate [App Password](https://myaccount.google.com/apppasswords)
-- Use app password in `GMAIL_APP_PASSWORD`
-
-### 3. Run Dev Server
+### 4. Run Development Server
 ```bash
-npm run dev
+pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
-
----
-
-## Development
-
-### Add Blog Post
-Create `content/blog/my-post.mdx`:
-```yaml
----
-title: "My First Post"
-description: "Short description"
-date: "2024-01-15"
-author: "Your Name"
----
-
-# Your content here
-
-This is a markdown blog post.
-```
-
-### Update Portfolio Content
-Edit sections in `app/components/sections/`:
-- `HeroSection.tsx` - Hero / headline
-- `AboutSection.tsx` - About me
-- `ExperienceSection.tsx` - Work experience
-- `SkillsSection.tsx` - Tech skills
-- `ProjectsSection.tsx` - Featured projects
-- `ContactSection.tsx` - Contact form
-
-### Customize Theme
-Update `tailwind.config.ts` and `app/globals.css`:
-- Colors: `--color-primary`, `--color-secondary`
-- Fonts: `--font-sans`, `--font-mono`
-- Animations: keyframes in globals
+Open [http://localhost:3000](http://localhost:3000) to see your portfolio.
 
 ---
 
-## Performance Best Practices
+## ✍️ How to Update Content
 
-### ✅ Implemented
+You can manage your portfolio content in two ways:
 
-1. **Image Optimization**
-   - Next.js Image component
-   - Automatic format conversion (WebP, AVIF)
-   - Lazy loading by default
+### Option A: Direct JSON Edit (Recommended for local dev)
+Modify the `data/portfolio.json` file. The UI will automatically reflect changes.
+> **Note**: This file is ignored by Git by default to protect your personal data. Keep a backup or use a template.
 
-2. **Code Splitting**
-   - Dynamic imports for components
-   - Tree-shaking unused code
-
-3. **Caching**
-   - Static generation for blog posts
-   - Browser cache headers
-   - CDN optimization on Vercel
-
-4. **Bundle Size**
-   - Tailwind CSS purges unused styles
-   - Framer Motion tree-shaken
-   - No unnecessary dependencies
-
-5. **Animations**
-   - GPU-accelerated transforms
-   - `will-change` for smooth animations
-   - Reduced motion support
-
-### 📊 Lighthouse Targets
-- **Performance**: 90+
-- **Accessibility**: 95+
-- **Best Practices**: 95+
-- **SEO**: 100
+### Option B: Admin Dashboard
+Navigate to `/admin` to use the interactive management panel. This allows for safe, real-time updates without touching the code.
 
 ---
 
-## Deployment on Vercel
+## 🔐 Security & Git
 
-### 1 Click Deploy
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yourusername/portfolio-next)
+To protect your personal information and sensitive configurations, the following rules are applied in `.gitignore`:
 
-### Manual Deploy
-```bash
-npm install -g vercel
-vercel
-```
+-   **`data/portfolio.json`**: Ignored to prevent leaking personal contact info or private drafts.
+-   **`admin.json` & `*.secret.json`**: Ignored for security.
+-   **`.env*`**: Never commit your environment variables.
 
-### Environment Variables
-Set on Vercel dashboard:
-- `GMAIL_USER`
-- `GMAIL_APP_PASSWORD`
-- `CONTACT_EMAIL`
+### Managing Data in Git
+If you want to share a template of your data without your personal info, create a `data/portfolio.example.json` and commit that instead.
 
 ---
 
-## SEO
+## 🚀 Deployment
 
-✅ Meta tags (OG, Twitter)  
-✅ Sitemap auto-generated  
-✅ Structured data (JSON-LD)  
-✅ Mobile-responsive  
-✅ Fast LCP/FID/CLS  
-
-Add `sitemap.xml` and `robots.txt` to `/public`
+The easiest way to deploy is using **Vercel**:
+1. Push your code to GitHub (remember `portfolio.json` is ignored, so you'll need to upload it or use the admin panel after deploy).
+2. Connect your repository to Vercel.
+3. Configure environment variables in the Vercel dashboard.
+4. Deploy!
 
 ---
 
-## TypeScript
+## 📜 License
 
-Strict mode enabled. Run type checking:
-```bash
-npm run type-check
-```
-
-All components typed for IDE autocompletion and safety.
-
----
-
-## Linting
-
-```bash
-npm run lint
-```
-
-Configured with ESLint + Next.js recommended rules.
-
----
-
-## Customization Checklist
-
-- [ ] Update name in `layout.tsx`
-- [ ] Add profile image to `/public`
-- [ ] Update `HeroSection` text and links
-- [ ] Add experience in `ExperienceSection`
-- [ ] Add skills in `SkillsSection`
-- [ ] Add projects in `ProjectsSection`
-- [ ] Setup email in `.env.local`
-- [ ] Update social links in `Navigation.tsx` and `Footer.tsx`
-- [ ] Change colors in `tailwind.config.ts`
-- [ ] Deploy to Vercel
-
----
-
-## Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Language**: TypeScript
-- **Email**: Nodemailer
-- **Blog**: MDX with gray-matter
-- **Hosting**: Vercel
-- **Icons**: Lucide React
-
----
-
-## License
-
-MIT © 2024
+MIT © 2024 [Akshay](https://github.com/AkshayPoojaryDev)
